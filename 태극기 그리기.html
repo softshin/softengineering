@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>자유주의로!</title>
+<!--style-->
+<link rel="stylesheet" href="style.css" type="text/css">
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script>
+$(document).ready(function (){
+	var		canvas = document.getElementById('canvas');
+	var		context = canvas.getContext('2d');
+	$(canvas).on({
+		mousedown:function(event){
+			var position = $(this).offset();
+			var x = event.pageX - position.left;
+			var y = event.pageY - position.top;
+			context.beginPath();   //선그리기 시작
+			context.moveTo(x,y);   //선그리기 시작(위치 x, y)
+			},
+			mouseup: function(event){
+			var position = $(this).offset();
+			var x = event.pageX - position.left;
+			var y = event.pageY - position.top;
+			context.lineTo(x,y);	//선 그리기 종료
+			context.stroke();	    //선 그리기 종료(위치 x, y)
+			}
+		});
+	});
+</script>	
+</HEAD>
+	
+<BODY>
+
+<BODY>
+
+<div id="header">
+<h1> Go to liberalism</h1>
+</div>
+
+<div id="nav">
+	<a href="index.html">
+	<img src="Taegeukgi.jpg" width="200" style="float:center"/></a>
+<ul>
+	<li><a href="TV journalism.html">TV journalism</a></li>
+	<li><a href="Online journalism.html">Online journalism</a></li>
+    <li><a href="what.html">what?</a></li>
+    <li><a href="why.html">why?</a></li>
+    <li><a href="who.html">who?</a></li>
+	<li><a href="추천언론인.html">추천 언론인</a></li> 
+	<li><a href="통일준비.html">진정한 통일준비란?</a></li>
+	<li><a href="태극기 그리기.html">태극기 그리기</a></li> 
+</ul>
+</div>
+
+<div id="section">
+<canvas id="canvas" width="700" height="400"style="border:3px solid black">
+</canvas>
+</div>
+
+<div id="footer">
+연락처: harryshin96@kw.ac.kr
+<div id="digitalClock"></div>
+<script type="text/javascript" src="digitalClock.js"></script>
+</div>
+
+</BODY>
+</html>

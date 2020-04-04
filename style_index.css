@@ -1,0 +1,29 @@
+<style>
+	div#header {
+	background-color:black;
+	color:white;
+	text-align:center;
+	padding:5px
+	float:center;
+	}
+	div#nav {
+	line-height:30px;
+	background-color:#eeeeee;
+	height:700px;
+	width:200px;
+	float:left;
+	padding:5px;
+	}
+	div#section {
+	width:1000px;
+	float:left;
+	padding:10px;
+	}
+	div#footer {
+	background-color:black;
+	color:white;
+	clear:both;
+	text-align:right;
+	padding:5px;
+	}
+</style>
